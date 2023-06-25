@@ -1,36 +1,68 @@
-# Getting Started with Create React App
+# Frontend - Java/React Technical Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend component of the Java/React technical test. It provides a user interface for creating, managing, and retrieving bookings for a property management system.
 
-## Available Scripts
+# Technologies Used
 
-In the project directory, you can run:
+    React (ES6 or newer)
+    npm or Yarn (package managers)
 
-### `npm start`
+# Setup Instructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To run the frontend application locally, follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    Make sure you have Node.js installed on your machine. You can download it from https://nodejs.org.
 
-### `npm test`
+    Clone the repository or download the source code.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    Open a terminal or command prompt and navigate to the project directory.
 
-### `npm run build`
+    Install the project dependencies by running either of the following commands:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+        If you use npm:
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+If you use Yarn:
+    yarn install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Once the dependencies are installed, start the development server with the following command:
 
-## Learn More
+    If you use npm:
+npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+If you use Yarn:
+        yarn start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    The frontend server will start running and automatically open in your default web browser at http://localhost:3000.
+
+# Usage
+
+The frontend provides a user interface for performing the following operations:
+
+    1. Create a booking
+    2. Read one or more bookings
+    3. Update a booking
+    4. Delete a booking
+
+Interact with the user interface to perform these operations and see the changes reflected in the backend.
+Folder Structure
+
+# The frontend code follows a common React project structure. Here is a brief overview of the important directories:
+
+    src - Contains the React source code for the frontend application.
+        components - Contains reusable React components.
+        pages - Contains the main application pages or screens.
+        services - Contains service modules for making API requests.
+        styles - Contains CSS or SCSS stylesheets.
+        App.js - The root component of the application.
+        index.js - The entry point of the application.
+
+# Contributing
+
+If you would like to contribute to this project, you can fork the repository and create a pull request with your proposed changes. Your contributions are welcome!
+
+# License
+
+This project is licensed under the MIT License.
+
+Feel free to update and customize this README file based on your specific project requirements and additional information you want to provide.
