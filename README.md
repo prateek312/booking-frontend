@@ -20,24 +20,32 @@ To run the frontend application locally, follow these steps:
     Install the project dependencies by running either of the following commands:
 
         If you use npm:
+
 npm install
 
 If you use Yarn:
+
     yarn install
 
-Once the dependencies are installed, start the development server with the following command:
+# Once the dependencies are installed, start the development server with the following command:
 
     If you use npm:
+
+    sql
+
 npm start
 
 If you use Yarn:
+
+sql
+
         yarn start
 
     The frontend server will start running and automatically open in your default web browser at http://localhost:3000.
 
-# Usage
+Usage
 
-The frontend provides a user interface for performing the following operations:
+# The frontend provides a user interface for performing the following operations:
 
     1. Create a booking
     2. Read one or more bookings
