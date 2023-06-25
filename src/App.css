@@ -72,13 +72,14 @@ ul {
   padding: 0;
   margin: 0;
   border: 1px solid green;
-  border-radius: 5px;
+  border-radius: 15px;
   padding: 10px;
+  align-self: center;
 }
 
 .booking-list {
   margin-left: -40px;
-  text-align: left;
+  text-align: center;
   border: 1px solid green;
   border-radius: 5px;
   padding: 10px;

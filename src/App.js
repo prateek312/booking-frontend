@@ -1,10 +1,19 @@
 import React, { useState, useEffect } from 'react';
+import MuiAlert from "@material-ui/lab/Alert";
+
 import './App.css';
+
+function Alert(props) {
+  return <MuiAlert elevation={6}
+      variant="filled" {...props} />;
+}
 
 const bookingURL = "http://localhost:8080/bookings";
 const blockingURL = "http://localhost:8080/blockings";
 
 const App = () => {
+
+  const [message, setMessage] = useState("");
   const [bookings, setBookings] = useState([]);
   const [blockedDates, setBlockedDates] = useState([{ startDate: '', endDate: '' }]);
   const [newBooking, setNewBooking] = useState({ startDate: '', endDate: '' });
@@ -47,11 +56,18 @@ const App = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newBooking),
       });
-      const data = await response.json();
-      setBookings([...bookings, data]);
-      setNewBooking({ startDate: '', endDate: '' });
+
+      if(response.status === 200) {
+        const data = await response.json();
+        setBookings([...bookings, data]);
+        setNewBooking({ startDate: '', endDate: '' });
+        setMessage("Booking created successfully.");
+      } else {
+        setMessage("Booking overlaps with an existing booking!!!");
+      }
     } catch (error) {
       console.error('Error creating booking:', error);
+      <Alert severity="error">Booking overlaps with an existing booking</Alert>
     }
   };
 
@@ -110,6 +126,8 @@ const App = () => {
           />
         </div>
         <button className="btn-primary" onClick={createBooking}>Create</button>
+        {/* Display the message component based on the value of the message state */}
+        {message && <MuiAlert severity="info">{message}</MuiAlert>}
       </div>
 
       <div className="section">
@@ -164,7 +182,7 @@ const App = () => {
         <h2>Blocked Dates</h2>
         <ul className="booking-list">
           {blockedDates.map((blockedDate) => (
-            <li key={blockedDate.id} className="booking-item">
+            <li key={blockedDate.id} className="block-item">
               <div>
                 <strong>Start Date:</strong> {blockedDate.startDate}
               </div>
